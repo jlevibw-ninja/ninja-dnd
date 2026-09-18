@@ -1,0 +1,3 @@
+import random
+
+weapon_damage = {"daggers": random.randint(1, 6), "ninja star": random.randint(1, 6), "sword": random.randint(1, 8), "axe": random.randint(1, 12), "machete": random.randint(1, 6), "whip": random.randint(1, 10), "sling": random.randint(1, 6), "throwing knife": random.randint(1, 6), "blowgun": random.randint(1, 6), "bow and arrow": random.randint(1, 8), "crossbow": random.randint(1, 10)}
