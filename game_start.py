@@ -71,7 +71,7 @@ def find_quest(stats):
         else:
             st.write("...")
         if ready == True:
-            st.write(f"Your you have {stats[7]} hp")
+            st.write(f"You have {stats[7]} hp")
             training.training_func(stats=stats)
 def start(stats):
     st.set_page_config(layout="wide")
