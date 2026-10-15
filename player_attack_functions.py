@@ -40,10 +40,9 @@ def fighter_attack(weapon, enemy_hp, enemy_ac):
             st.write(f"You swung your sword at the enemy for {damage} damage! ")
         elif weapon == "axe":
             st.write(f"You swung your axe at the enemy for {damage} damage!")
-    if attack_roll >= enemy_ac - 5:
-        st.write(f"You hit the enemy's armor and did no damage.")     
-    else:
-        st.write(f"You missed the enemy.")
+        
+        else:
+            st.write(f"You missed the enemy.")
 
     enemy_hp -= damage
     return enemy_hp
