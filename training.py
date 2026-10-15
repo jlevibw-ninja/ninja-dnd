@@ -26,34 +26,29 @@ def cat_attack(player_hp, player_ac, player_state):
 
 def player_attack(stats, enemy_hp, enemy_ac, num):
     
-    player_state = st.selectbox("Do you want to attack, run or hide?", ["Stand there", "Attack", "Run"], key = num)
+    player_state = st.selectbox("Do you want to attack or run?", ["Stand there", "Attack", "Run"], key = num)
     if player_state == "Attack":
         if stats[11] == "spy":
             enemy_hp = af.spy(stats[8], enemy_hp, enemy_ac)
         elif stats[11] == "assasin":
-            enemy_hp = sf.assasin(stats[8], enemy_hp, enemy_ac)
+            enemy_hp = af.assasin(stats[8], enemy_hp, enemy_ac)
         elif stats[11] == "adventurer":
             enemy_hp = af.adventurer(stats[8], enemy_hp, enemy_ac)
         elif stats[11] == "fighter":
             enemy_hp = af.fighter(stats[8], enemy_hp, enemy_ac)
-        elif stats[11] == "ranger":
-            enemy_hp = af.ranger(stats[8], enemy_hp, enemy_ac)
+        #elif stats[11] == "ranger":
+        #3    enemy_hp = af.ranger(stats[8], enemy_hp, enemy_ac)
  
         elif stats[11] == "animal trainer":
             enemy_hp = af.animal_trainer(stats[8], enemy_hp, enemy_ac)
         
-        if player_state == "Run":        
-            st.write("You run away from the cat.")       
-            time_to_attack == 100
-        elif player_state == "Hide":        
-            hide = random.randint(1, 20) 
-            if hide >= 12:    
-                st.write("You have succesfully hidden.")        
-        else: 
-            st.write("You could not find a place to hide.") 
-            player_state = "Attack" 
-            time_to_attack = 100               
-            enemy_hp = af.ranger(stats[8], enemy_hp, enemy_ac)
+    elif player_state == "Run":        
+        st.write("You run away from the cat.")       
+        
+           
+        
+        time_to_attack = 100               
+            
         
     
     
